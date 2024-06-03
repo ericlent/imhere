@@ -17,16 +17,16 @@ export default function Home() {
 
         console.log("Você clicou no botão de adicionar");
 
-        if (participants.includes(participantName)) {
+        if (participants.includes(participantName.trim() )) {
             return Alert.alert("Participante Existe", "Já existe um participante na lista com esse nome")
         }
-        else if (participantName == '') {
+        else if (participantName.trim() == '') {
             return Alert.alert("Participante Inválido", "Digite o nome")
         }
 
         else {
             //participants.push('Menat');
-            setParticipants(prevState => [...prevState, participantName]);
+            setParticipants(prevState => [...prevState, participantName.trim() ]);
             console.log(participants);
             setParticipantName('');
         }
@@ -67,7 +67,7 @@ export default function Home() {
                     keyboardType="default"
                     //onChangeText={text => setParticipantName(text)}
                     onChangeText={setParticipantName}
-                    value={participantName}
+                    value={participantName.trim()}
                 />
 
                 <TouchableOpacity style={styles.button} onPress={handleParticipantAdd}>
