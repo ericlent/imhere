@@ -12,7 +12,7 @@ export default function Home() {
     const [participants, setParticipants] = useState<string[]>([]);
     //const participants = ['Cammy'];
     const [participantName, setParticipantName] = useState('');
-
+    
     function handleParticipantAdd() {
 
         console.log("Você clicou no botão de adicionar");
@@ -56,7 +56,7 @@ export default function Home() {
                 Nome do Evento
             </Text>
             <Text style={styles.eventDate}>
-                Terça, 28 de Maio de 2022
+                Terça, 04 de Junho de 2024
             </Text>
 
             <View style={styles.form}>
